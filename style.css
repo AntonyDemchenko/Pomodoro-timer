@@ -1,0 +1,210 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D5242A;
+}
+
+body.work-mode {
+  background-color: blue;
+}
+
+body.break-mode {
+  background-color: green;
+}
+
+body.long-break-mode {
+  background-color: yellow;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+}
+
+.stages {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 80px 0;
+}
+
+.stages__btn {
+  width: 25%;
+  border-radius: 5px;
+  opacity: 0.6;
+
+}
+
+.stages__btn.active {
+  background-color: red;
+}
+
+.activities-title {
+
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #DC4D41;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.time {
+  font-size: 40px;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.minutes {}
+.seconds {}
+.btns {}
+.start-timer {}
+.stop-timer {}
+
+.set-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  background-color: #DC4D41 ;
+  border-radius: 20px;
+  display: none;
+}
+
+.settings {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  /*border: 1px solid black;*/
+}
+
+.set-time {
+  /*width: 100%;*/
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.set-time__title {
+  position: absolute;
+  top: -100%;
+}
+
+.set-time input {
+  width: 160px;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid grey;
+  margin: 0 2px 0 0;
+}
+
+.set-time__minutes {}
+.set-time__seconds {}
+.set-time__arrows {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+
+}
+.set-time__arrows button{
+  height: 50%;
+}
+
+.set-time__arrows button img {
+  width: 10px;
+}
+.set-time__up img {
+  transform: rotate(180deg);
+}
+.set-time__down {}

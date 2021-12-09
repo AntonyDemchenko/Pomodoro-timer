@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pomodoro</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="green.png" type="image/png">
+</head>
+<body class="work-mode">
+	<div class="container">
+		<div class="stages">
+			<button class="stages__btn active" id="work-mode">WORK</button>
+			<button class="stages__btn " id="break-mode">BREAK</button>
+			<button class="stages__btn " id="long-break-mode">LONG BREAK</button>
+		</div>
+
+		<h2 class="activities-title">TIME FOR <span class="activities">WORK</span>!</h2>
+
+		<div class="timer">
+			<p class="time" >
+				<span class="minutes">25</span> 
+				:
+				<span class="seconds">00</span>
+			</p>
+
+			<div class="btns">
+				<button class="start-timer">start</button>
+				<!-- <button class="stop-timer">stop</button> -->
+			</div>
+		</div>
+			
+		
+		
+		<div class="set-timer">
+			<div class="settings">
+
+				<div class=" set-time">
+					<h3 class="set-time__title">time for work:</h3>
+
+					<input type="text" class="set-time__minutes" value="25">
+
+					<div class="set-time__arrows">
+						<button class="set-time__up">
+							<img src="arrow.png" alt="">
+						</button>
+						<button class="set-time__down">
+							<img src="arrow.png" alt="">
+						</button>
+					</div>
+				</div>
+				
+
+				<div class="set-time">
+					<h3 class="set-time__title">time for rest:</h3>
+
+					<input type="text" class="set-time__seconds" value="5">
+
+					<div class="set-time__arrows">
+						<button class="set-time__up">
+							<img src="arrow.png" alt="">
+						</button>
+						<button class="set-time__down">
+							<img src="arrow.png" alt="">
+						</button>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+			
+
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
