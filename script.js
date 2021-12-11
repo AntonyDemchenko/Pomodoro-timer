@@ -1,7 +1,7 @@
 "use strict"
 
 
-let minutes = 1;
+let minutes = 25;
 let seconds = 0;
 
 let minutesValue = document.querySelector('.minutes');
