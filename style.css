@@ -69,8 +69,11 @@ select {
   font: inherit;
 }
 
-button {
+button{
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 section {
@@ -248,6 +251,7 @@ body.long-break-mode {
   margin-bottom: 20px;
   border-radius: 10px;
   width: 60%;
+  text-align: center;
 }
 .minutes {}
 .seconds {}
@@ -483,5 +487,8 @@ body.long-break-mode {
 @media(max-width: 760px){
   .container{
     width: 95vw;
+  }
+  .time{
+    font-size: 35px;
   }
 }
