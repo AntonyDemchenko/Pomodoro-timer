@@ -6,72 +6,129 @@
 	<title>Pomodoro</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="green.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 </head>
 <body class="work-mode">
-	<div class="container">
-		<div class="stages">
-			<button class="stages__btn active" id="work-mode">WORK</button>
-			<button class="stages__btn " id="break-mode">BREAK</button>
-			<button class="stages__btn " id="long-break-mode">LONG BREAK</button>
-		</div>
 
-		<h2 class="activities-title">TIME FOR <span class="activities">WORK</span>!</h2>
-
-		<div class="timer">
-			<p class="time" >
-				<span class="minutes">25</span> 
-				:
-				<span class="seconds">00</span>
-			</p>
-
-			<div class="btns">
-				<button class="start-timer">start</button>
-				<!-- <button class="stop-timer">stop</button> -->
-			</div>
-		</div>
-			
-		
-		
-		<div class="set-timer">
-			<div class="settings">
-
-				<div class=" set-time">
-					<h3 class="set-time__title">time for work:</h3>
-
-					<input type="text" class="set-time__minutes" value="25">
-
-					<div class="set-time__arrows">
-						<button class="set-time__up">
-							<img src="arrow.png" alt="">
-						</button>
-						<button class="set-time__down">
-							<img src="arrow.png" alt="">
-						</button>
-					</div>
-				</div>
-				
-
-				<div class="set-time">
-					<h3 class="set-time__title">time for rest:</h3>
-
-					<input type="text" class="set-time__seconds" value="5">
-
-					<div class="set-time__arrows">
-						<button class="set-time__up">
-							<img src="arrow.png" alt="">
-						</button>
-						<button class="set-time__down">
-							<img src="arrow.png" alt="">
-						</button>
-					</div>
-				</div>
-				
-				
-			</div>
-		</div>
-			
-
+	<div class="finish-popup">
+		<h4 class="finish-popup__title">TIME IS OVER!</h4>
+		<button class="finish-popup__btn">OK</button>
 	</div>
+
+	<section class="pomodoro-timer">
+
+		<div class="dark-mode"></div>
+
+		<div class="container">
+			<div class="stages">
+				<button class="stages__btn active" id="work-mode">WORK</button>
+				<button class="stages__btn " id="break-mode">BREAK</button>
+				<button class="stages__btn " id="long-break-mode">LONG BREAK</button>
+			</div>
+
+			<h2 class="activities-title">TIME <span class="activities">TO WORK</span>!</h2>
+
+			<div class="timer-body">
+
+				<div class="timer-block " >
+					<div class="timer-line"></div>
+					<div class="white-left"></div>
+					<div class="green-right"></div>
+				</div>	
+				
+					<div class="timer">
+						<p class="time" >
+							<span class="minutes">25</span> 
+							:
+							<span class="seconds">00</span>
+						</p>
+
+						<div class="btns">
+							<button class="start-timer">start</button>
+						</div>
+					</div>
+				
+			</div>
+
+			
+				
+				
+			<div class="set-timer">
+				<div class="settings">
+
+					<div class=" set-time">
+						<h3 class="set-time__title">time for work:</h3>
+
+						<input type="text" class="set-time__minutes" value="25">
+
+						<div class="set-time__arrows">
+							<button class="set-time__up">
+								<img src="arrow.png" alt="">
+							</button>
+							<button class="set-time__down">
+								<img src="arrow.png" alt="">
+							</button>
+						</div>
+					</div>
+					
+
+					<div class="set-time">
+						<h3 class="set-time__title">time for rest:</h3>
+
+						<input type="text" class="set-time__seconds" value="5">
+
+						<div class="set-time__arrows">
+							<button class="set-time__up">
+								<img src="arrow.png" alt="">
+							</button>
+							<button class="set-time__down">
+								<img src="arrow.png" alt="">
+							</button>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+
+			<div class="sound-off">
+				<img src="soundOff.png" alt="" class="sound-off__button active">
+				<img src="soundOn.png" alt="" class="sound-off__button ">
+				<audio class="audio-start" src="startBell1.mp3"></audio>
+				<audio class="audio-finish" src="timeIsOver.mp3"></audio>
+			</div>
+				
+			<div class="info">
+				<a href="#information" class="info-anchor anchor">
+					<img src="info.png" alt="" class="info__img">
+				</a> 
+			</div>
+
+		</div>
+	</section>
+
+	<section class="information">
+		<div class="article" >
+			<h2 class="article__title" >What is Pomodoro Technique?</h2>
+			<p class="article__text">The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student. - <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank" class="article__link">Wikipedia</a></p>
+		</div>
+
+		<div class="article" id="information">
+			<h2 class="article__title" >How to use the Pomodoro Timer?</h2>
+			<p class="article__text">1. Add tasks to work on today</p>
+			<p class="article__text">2. Set estimate pomodoros (1 = 25min of work) for each tasks</p>
+			<p class="article__text">3. Select a task to work on</p>
+			<p class="article__text">4. Start timer and focus on the task for 25 minutes</p>
+			<p class="article__text">5. Take a break for 5 minutes when the alarm ring</p>
+			<p class="article__text">6. Iterate 3-5 until you finish the tasks</p>
+		</div>
+		
+	</section>
+	
 	<script src="script.js"></script>
 </body>
 </html>
