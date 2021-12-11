@@ -1,7 +1,7 @@
 "use strict"
 
 
-let minutes = 25;
+let minutes = 1;
 let seconds = 0;
 
 let minutesValue = document.querySelector('.minutes');
@@ -20,18 +20,27 @@ startButton.addEventListener("click", function(){
 	startSound();
 });
 
+document.querySelector(".audio-start").volume = 1.0;
+document.querySelector(".audio-finish").volume = 1.0;
+
+//Launch the start-sound;
 function startSound(){
+	if(document.querySelector(".sound-off__button-1").classList.contains("active")){
+			document.querySelector(".audio-start").volume = 0;
+		}
 	if(seconds == 0){
-		document.querySelector(".audio-start").volume = 1.0;
 		document.querySelector(".audio-start").play();
 	}
 }
 
 let audioFinish = document.querySelector(".audio-finish");
-let stopAudioPopup = document.querySelector(".finish-popup")
+let stopAudioPopup = document.querySelector(".finish-popup");
 
+//Launch the end-sound.
 function finishSound(){
-	document.querySelector(".audio-finish").volume = 1.0;
+	if(document.querySelector(".sound-off__button-1").classList.contains("active")){
+			document.querySelector(".audio-finish").volume = 0;
+		}
 	audioFinish.play();
 	stopAudioPopup.classList.add("active");
 
@@ -39,7 +48,15 @@ function finishSound(){
 		audioFinish.pause();
 		stopAudioPopup.classList.remove("active");
 	})
-}
+};
+
+
+let soundSwitch = document.querySelector(".sound-off");
+//Switch the sound button.
+soundSwitch.addEventListener("click", function(){
+	document.querySelector(".sound-off__button-1").classList.toggle("active");
+	
+});
 
 //Running/Stopping the circle indicator of time.
 let timerElements = document.querySelector('.timer-block').children;
@@ -224,7 +241,6 @@ function changeIndicatorTime() {
 		item.style.animationDuration = `${siteCondition[buttonId].minutes * 60}s`;
 		document.querySelector(".green-right").style.background = siteCondition[buttonId]["indicatorColor"];
 		document.querySelector(".timer-line").style.background = `linear-gradient(to right, ${siteCondition[buttonId]["indicatorColor"]} 50%, white 50%`;
-
 	});
 };
 

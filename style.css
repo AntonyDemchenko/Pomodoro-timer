@@ -158,11 +158,17 @@ body.long-break-mode {
   transform: scale(0.95);
 }
 
-.sound-off__button {
-  display: none;
+.sound-off__button-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
 }
-.sound-off__button.active{
-  display: flex;
+
+.sound-off__button-1.active{
+  display: none;
 }
 
 .container {
@@ -189,12 +195,11 @@ body.long-break-mode {
 .stages__btn {
   width: 25%;
   border-radius: 5px;
-  /*opacity: 0.6;*/
   background-color: #375E99;
   color: white;
   font-weight: bold;
-  /*-webkit-text-stroke: 0.5px black;*/
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 #work-mode {
